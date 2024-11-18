@@ -1,0 +1,11 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiHotelApp.SobrePage"
+             Title="Sobre">
+
+    <StackLayout Padding="30" Spacing="20">
+        <Label Text="Sobre o Aplicativo" FontSize="30" HorizontalOptions="Center"/>
+        <Label Text="Desenvolvedor: Jeisa Boaventura" FontSize="20" HorizontalOptions="Center"/>
+        <Label Text="Ano de Desenvolvimento: 2024" FontSize="20" HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>
