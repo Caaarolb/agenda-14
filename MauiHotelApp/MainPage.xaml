@@ -1,7 +1,8 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiHotelApp.MainPage"
-             Title="Cálculo da Diária">
+             Title="Cálculo da Diária"
+             BackgroundColor="Beige">
 
     <ScrollView>
         <StackLayout Padding="20" Spacing="20">
@@ -10,7 +11,7 @@
             <Label Text="Cálculo da Diária"
                    FontSize="30"
                    FontAttributes="Bold"
-                   TextColor="#5B4B8A"
+                   TextColor="#000000"
                    HorizontalOptions="Center"/>
 
             <!-- Seção de Adultos -->
@@ -48,30 +49,47 @@
             </HorizontalStackLayout>
 
             <!-- Seção de Suíte -->
-            <Label Text="Escolha sua Suíte" FontSize="18"/>
-            <Picker x:Name="SuitePicker"
-                    Title="Selecione sua Acomodação"
-                    WidthRequest="200">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Suíte Simples</x:String>
-                        <x:String>Suíte Luxo</x:String>
-                        <x:String>Suíte Presidencial</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
+            <StackLayout Orientation="Vertical"
+             Padding="10"
+             HorizontalOptions="Start"
+             VerticalOptions="Start"
+             Margin="10,0,0,0">
+                <Label Text="Escolha sua Suíte"
+           FontSize="18"
+           HorizontalOptions="Start" />
+                <Picker x:Name="SuitePicker"
+            Title="Selecione sua Acomodação"
+            WidthRequest="200"
+            HorizontalOptions="Start">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Suíte Simples</x:String>
+                            <x:String>Suíte Luxo</x:String>
+                            <x:String>Suíte Presidencial</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
 
             <!-- Data de Check-in -->
             <Label Text="Período da Estadia" FontSize="18"/>
             <DatePicker x:Name="CheckInDatePicker" Format="dd/MM/yyyy"/>
 
+             <Button Text="Avançar"
+            BackgroundColor="HotPink"
+            TextColor="White"
+            FontSize="18"
+            Margin="0,20,0,0"
+            Clicked="OnAvancarClicked" />
+
             <!-- Botão para a tela Sobre -->
             <Button Text="Sobre"
                     Clicked="OnSobreClicked"
-                    BackgroundColor="#5B4B8A"
-                    TextColor="White"
+                    BackgroundColor="#FF007F"
+                    TextColor="LightGrey"
                     CornerRadius="10"
                     HorizontalOptions="Center"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
+
